@@ -1,0 +1,365 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Feliz 14 de febrero mi amor</title>
+<style>
+  body {
+    margin: 0;
+    padding: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    background-color: #f0f0f0;
+    position: relative;
+  }
+
+  .heart-container {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    overflow: hidden;
+  }
+
+  .heart {
+    width: 40px;
+    height: 40px;
+    position: absolute;
+    animation: pulse 1s infinite ease-in-out;
+  }
+
+  .heart:before,
+  .heart:after {
+    content: "";
+    width: 20px;
+    height: 32px;
+    background-color: rgb(137, 91, 221);
+    border-radius: 50%;
+    position: absolute;
+    top: 0;
+  }
+
+  .heart:before {
+    left: 15px;
+    border-top-left-radius: 40px;
+    border-top-right-radius: 40px;
+    transform: rotate(40deg);
+  }
+
+  .heart:after {
+    left: 5px;
+    border-top-left-radius: 40px;
+    border-top-right-radius: 40px;
+    transform: rotate(-45deg);
+  }
+
+  .image-container-gojo img {
+    width: 20%; /* Ajustar el tamaño de la imagen */
+    border-radius: 10px; /* Agregar bordes redondeados */
+    transform: rotate(5deg); /* Aplicar rotación */
+    position: fixed;
+    top: 50%;
+    left: calc(50% + 580px); /* Ajustar la posición de la imagen */
+    z-index: -1; /* Coloca la imagen detrás del texto */
+  }
+
+  .image-container-jack img {
+    width: 30%; /* Ajustar el tamaño de la imagen */
+    border-radius: 10px; /* Agregar bordes redondeados */
+    transform: rotate(-7deg); /* Aplicar rotación */
+    position: fixed;
+    top: 20%;
+    left: calc(50% + 80px); /* Ajustar la posición de la imagen */
+
+    z-index: -1; /* Coloca la imagen detrás del texto */
+  }
+  .image-container-loid img {
+    width: 20%; /* Ajustar el tamaño de la imagen */
+    border-radius: 10px; /* Agregar bordes redondeados */
+    transform: rotate(5deg); /* Aplicar rotación */
+    position: fixed;
+    left: calc(10% + 50px); /* Ajustar la posición de la imagen */
+    top: 10%;
+    z-index: -1; /* Coloca la imagen detrás del texto */
+  }
+
+  .image-container-chilemorron img {
+    width: 15%; /* Ajustar el tamaño de la imagen */
+    border-radius: 10px; /* Agregar bordes redondeados */
+    transform: rotate(-6deg); /* Aplicar rotación */
+    position: fixed;
+    left: calc(10% + 50px); /* Ajustar la posición de la imagen */
+    top: 50%;
+    z-index: -1; /* Coloca la imagen detrás del texto */
+  }
+
+  .image-container-tomioka img {
+    width: 10%; /* Ajustar el tamaño de la imagen */
+    border-radius: 10px; /* Agregar bordes redondeados */
+    transform: rotate(6deg); /* Aplicar rotación */
+    position: fixed;
+    left: calc(0% + 40px); /* Ajustar la posición de la imagen */
+    top: 60%;
+    z-index: -1; /* Coloca la imagen detrás del texto */
+  }
+
+  .image-container-demochan img {
+    width: 15%; /* Ajustar el tamaño de la imagen */
+    border-radius: 10px; /* Agregar bordes redondeados */
+    transform: rotate(-7deg); /* Aplicar rotación */
+    position: fixed;
+    left: calc(60% + 40px); /* Ajustar la posición de la imagen */
+    top: 80%;
+    z-index: -1; /* Coloca la imagen detrás del texto */
+  }
+  .image-container-kazu img {
+    width: 10%; /* Ajustar el tamaño de la imagen */
+    border-radius: 10px; /* Agregar bordes redondeados */
+    transform: rotate(8deg); /* Aplicar rotación */
+    position: fixed;
+    left: calc(25% + 90px); /* Ajustar la posición de la imagen */
+    top: 80%;
+    z-index: -1; /* Coloca la imagen detrás del texto */
+  }
+
+  .image-container-pika img {
+    width: 15%; /* Ajustar el tamaño de la imagen */
+    border-radius: 10px; /* Agregar bordes redondeados */
+    transform: rotate(5deg); /* Aplicar rotación */
+    position: fixed;
+    top: 0%;
+    left: calc(50% + 580px); /* Ajustar la posición de la imagen */
+    z-index: -1; /* Coloca la imagen detrás del texto */
+  }
+
+
+
+  @keyframes pulse {
+    0% {
+      transform: scale(1);
+    }
+    50% {
+      transform: scale(1.1);
+    }
+    100% {
+      transform: scale(1);
+    }
+  }
+
+  .note {
+    position: absolute;
+    top: 125%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    background-color: rgba(255, 240, 230, 0.8); /* Color sepia */
+    padding: 20px;
+    border-radius: 10px;
+    text-align: center;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+    overflow: hidden; /* Para ocultar las líneas horizontales que sobresalen */
+    width: 100%;
+    max-width: 600px;
+  }
+
+  .note-2 {
+    position: absolute;
+    top: 165%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    background-color: rgba(255, 240, 230, 0.8); /* Color sepia */
+    padding: 20px;
+    border-radius: 10px;
+    text-align: center;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+    overflow: hidden; /* Para ocultar las líneas horizontales que sobresalen */
+    width: 100%;
+    max-width: 600px;
+  }
+
+  .warning-not {
+    position: absolute;
+    top: 20%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    background-color: rgba(255, 240, 230, 0.8); /* Color sepia */
+    padding: 10px;
+    border-radius: 10px;
+    text-align: center;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+    overflow: hidden; /* Para ocultar las líneas horizontales que sobresalen */
+    width: 100%;
+    max-width: 500px;
+  }
+
+  .warning-not-2 {
+    position: absolute;
+    top: 40%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    background-color: rgba(255, 240, 230, 0.8); /* Color sepia */
+    padding: 20px;
+    border-radius: 10px;
+    text-align: center;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+    overflow: hidden; /* Para ocultar las líneas horizontales que sobresalen */
+    width: 100%;
+    max-width: 500px;
+  }
+
+  .warning-not-3 {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    background-color: rgba(255, 240, 230, 0.8); /* Color sepia */
+    padding: 20px;
+    border-radius: 10px;
+
+    text-align: center;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+    overflow: hidden; /* Para ocultar las líneas horizontales que sobresalen */
+    width: 90%;
+    max-width: 500px;
+  }
+  .warning-not-4 {
+    position: absolute;
+    top: 60%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    background-color: rgba(255, 240, 230, 0.8); /* Color sepia */
+    padding: 20px;
+    border-radius: 10px;
+
+    text-align: center;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+    overflow: hidden; /* Para ocultar las líneas horizontales que sobresalen */
+    width: 100%;
+    max-width: 500px;
+  }
+  .warning-not-5 {
+    position: absolute;
+    top: 70%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    background-color: rgba(255, 240, 230, 0.8); /* Color sepia */
+    padding: 20px;
+    border-radius: 10px;
+
+    text-align: center;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+    overflow: hidden; /* Para ocultar las líneas horizontales que sobresalen */
+    width: 100%;
+    max-width: 500px;
+  }
+
+  .note p {
+    margin: 50;
+    background: repeating-linear-gradient(to bottom, transparent, transparent 2px, rgba(0, 0, 0, 0.5) 2px, rgba(0, 0, 0, 0.5) 4px);
+    -webkit-background-clip: text;
+    font-style: italic; /* Agrega estilo cursivo al texto */
+    font-size: 20px;
+  }
+
+  .note-2 p {
+    margin: 50;
+    background: repeating-linear-gradient(to bottom, transparent, transparent 2px, rgba(0, 0, 0, 0.5) 2px, rgba(0, 0, 0, 0.5) 4px);
+    -webkit-background-clip: text;
+    font-style: italic; /* Agrega estilo cursivo al texto */
+    font-size: 20px;
+  }
+
+  .warning-not p {
+    margin: 50;
+    background: repeating-linear-gradient(to bottom, transparent, transparent 2px, rgba(0, 0, 0, 0.5) 2px, rgba(0, 0, 0, 0.5) 4px);
+    -webkit-background-clip: text;
+    font-style: normal; /* Agrega estilo cursivo al texto */
+    font-size: 30px;
+  }
+</style>
+</head>
+<body>
+
+<div class="heart-container">
+  <!-- Corazones aleatorios -->
+  <script>
+    // Función para generar números aleatorios en un rango específico
+    function getRandomInt(min, max) {
+      return Math.floor(Math.random() * (max - min + 1)) + min;
+    }
+
+    // Crear 20 corazones aleatorios
+    for (let i = 0; i < 80; i++) {
+      const heart = document.createElement('div');
+      heart.className = 'heart';
+      heart.style.top = `${getRandomInt(0, 100)}vh`;
+      heart.style.left = `${getRandomInt(0, 100)}vw`;
+      document.querySelector('.heart-container').appendChild(heart);
+    }
+  </script>
+</div>
+    <div class="image-container-gojo">
+    <img src="https://static.wikia.nocookie.net/308f2679-5087-4632-8322-092f63e051fa/scale-to-width/755" alt="Imagen">
+  </div>
+  <div class="image-container-jack">
+    <img src="https://i.pinimg.com/originals/94/a9/3b/94a93b7352db0ae613e97d99d623bba7.jpg" alt="Imagen">
+  </div>
+
+  <div class="image-container-loid">
+    <img src="https://images-wixmp-ed30a86b8c4ca887773594c2.wixmp.com/f/568cdfe9-6b99-4af5-a570-221a29f830a0/dfv9vtb-7e4c3c51-dd74-4e23-9f1b-b0b63d2a903d.png?token=eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJzdWIiOiJ1cm46YXBwOjdlMGQxODg5ODIyNjQzNzNhNWYwZDQxNWVhMGQyNmUwIiwiaXNzIjoidXJuOmFwcDo3ZTBkMTg4OTgyMjY0MzczYTVmMGQ0MTVlYTBkMjZlMCIsIm9iaiI6W1t7InBhdGgiOiJcL2ZcLzU2OGNkZmU5LTZiOTktNGFmNS1hNTcwLTIyMWEyOWY4MzBhMFwvZGZ2OXZ0Yi03ZTRjM2M1MS1kZDc0LTRlMjMtOWYxYi1iMGI2M2QyYTkwM2QucG5nIn1dXSwiYXVkIjpbInVybjpzZXJ2aWNlOmZpbGUuZG93bmxvYWQiXX0.GfSosiuSWhFSRdPJz1_Yq0O7bAJOHcpQjyLQiRxWN6E" alt="Imagen">
+  </div>
+
+  <div class="image-container-chilemorron">
+    <img src="https://images6.alphacoders.com/123/1233004.png" alt="Imagen">
+  </div>
+
+  <div class="image-container-tomioka">
+    <img src="https://i.pinimg.com/originals/3a/c1/62/3ac16244c4693d7cf481b29c36d203c6.jpg" alt="Imagen">
+  </div>
+  <div class="image-container-demochan">
+    <img src="https://www.dibujandoconvani.com.ar/wp-content/uploads/2019/10/demogorgon-kawaii.jpg" alt="Imagen">
+  </div>
+  <div class="image-container-kazu">
+    <img src="https://i.pinimg.com/originals/76/85/0d/76850d9ce879d00dd285e19cbc9ef934.jpg" alt="Imagen">
+
+  </div>
+  <div class="image-container-pika">
+    <img src="https://i.pinimg.com/originals/fe/c1/4c/fec14ce313d52e827fbbe54762b85ef9.jpg" alt="Imagen">
+  </div>
+
+  <div class="warning-not">
+    <p>🫠 Advertencia: Puede que esta pagina le cause Chipilismo Cronico 🫠</p>
+  </div>
+
+  <div class="warning-not-2">
+    <p>😱 ¿Segura que quieres continuar Yadira? 😱</p>
+  </div>
+
+  <div class="warning-not-3">
+    <p>😉 Conste te vas a enamorar mas 😉</p>
+  </div>
+
+  <div class="warning-not-4">
+    <p>🧐 Sobre advertencia no hay respeto al ajeno del derecho 🧐</p>
+  </div>
+
+  <div class="warning-not-5">
+    <p>🫨 ¿o como es? 🫨</p>
+  </div>
+
+  <div class="note">
+    <p>Hola Yadira, ¿cómo te encuentras el día de hoy? Tal vez sea la pregunta que más te hacía cuando hablábamos por mensaje. ¿Esa pregunta contenía un "me gustas" tan sutil? No tengo idea, jeje. Puedo decir con toda certeza que este es nuestro primer día de San Valentín juntos, ¡y no podría estar más feliz al respecto! 😊 La verdad, cuando te conocí en persona por primera vez, supe que había encontrado a alguien especial, alguien de quien no me quería alejar por ningún motivo. Personalmente, nunca he sido bueno conociendo a las personas de frente. Siempre pongo una cara de pocos amigos que hace que los demás piensen que soy un payaso o algo peor. Contigo me sentí muy feliz al verte. No pude aguantar darte un abrazo muy grande, y hasta cierto punto no me culpo porque te gustó, ¡y lo demostraste después aceptando ser mi novia! 😊</p>
+  </div>
+  <div class="note">
+    <p>Hola Yadira, ¿cómo te encuentras el día de hoy? Tal vez sea la pregunta que más te hacía cuando hablábamos por mensaje. ¿Esa pregunta contenía un "me gustas" tan sutil? No tengo idea, jeje. Puedo decir con toda certeza que este es nuestro primer día de San Valentín juntos, ¡y no podría estar más feliz al respecto! 😊 La verdad, cuando te conocí en persona por primera vez, supe que había encontrado a alguien especial, alguien de quien no me quería alejar por ningún motivo. Personalmente, nunca he sido bueno conociendo a las personas de frente. Siempre pongo una cara de pocos amigos que hace que los demás piensen que soy un payaso o algo peor. Contigo me sentí muy feliz al verte. No pude aguantar darte un abrazo muy grande, y hasta cierto punto no me culpo porque te gustó, ¡y lo demostraste después aceptando ser mi novia! 😊</p>
+  </div>
+  <div class="note-2">
+    <p>Siempre tuve el peso de tratar de comprender cómo me sentía a veces. De hecho, me había resignado a tal vez estar solo. Quién sabe, tal vez era lo que me ganaría por mi forma tan cerrada de ser, jeje. Pero las cosas cambian, y tú me lo enseñaste de la forma más bonita que podría haber imaginado. Yo sabía que serías la única que me escucharía, que me daría un poco de su tiempo para conocerme, que no solo me ofrecería un vaso con agua sino que compartiría uno conmigo, y créeme, eso no cualquier persona lo hace. Me gustas mucho, y me gustaste demasiado después, y me sigues gustando más y más. No exagero al decir que te amo, que eres una mujer extraordinaria y mucho más incluso. Le pido a la vida y a Dios que me permita estar a tu lado muchos años. Quiero verte crecer, y qué mejor que sea como tu pareja. Te amo Yadira.
+
+        ¿Serías mi San Valentín por siempre?</p>
+  </div>
+</body>
+</html
